@@ -1,0 +1,13 @@
+{
+    "routes" : [
+        {
+            "src" : "/(.*)" , "dest" : "/index.html"
+        },
+        {
+            "src" : "/home" , "dest" : "/phish1.html"
+        },
+        {
+            "src" : "/api/(.*)" , "dest" : "/appp.js"
+        }
+    ]
+}
