@@ -48,10 +48,10 @@ app.post('/api/send', async (req, res) => {
 
 
 
-// Serve static HTML files from the 'smtpserverwithui' directory
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname , 'public', 'index.html'));
-  });
+// // Serve static HTML files from the 'smtpserverwithui' directory
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname , 'public', 'index.html'));
+//   });
 
 
 
@@ -59,10 +59,10 @@ app.get('/', (req, res) => {
 
 
 
-// Serve static files (HTML, images, etc.)
-app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname , 'public','phish1.html'));
-  });
+// // Serve static files (HTML, images, etc.)
+// app.get('/home', (req, res) => {
+//     res.sendFile(path.join(__dirname , 'public','phish1.html'));
+//   });
 
 // Function to check if userId is unique
 function isUniqueId(userId, callback) {
