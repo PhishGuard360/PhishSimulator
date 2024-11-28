@@ -3,8 +3,10 @@ const fs = require('fs');
 const path = require('path');
 const nodemailer = require('nodemailer'); // Import Nodemailer
 // const { serverEvents } = require('./smtp1'); // Your SMTP event emitter
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 
@@ -14,10 +16,10 @@ const transporter = nodemailer.createTransport({
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-        // user: 'ramlakman98@gmail.com', // Your Gmail address
-        // pass: 'gzdv ston ffoj btae',   // Your Gmail app password
-        user: process.env.EMAIL_USER, // Your Gmail address
-        pass: process.env.EMAIL_PASS, // Your Gmail app password
+        user: 'ramlakman98@gmail.com', // Your Gmail address
+        pass: 'gzdv ston ffoj btae',   // Your Gmail app password
+        // user: process.env.EMAIL_USER, // Your Gmail address
+        // pass: process.env.EMAIL_PASS, // Your Gmail app password
     },
 });
 
